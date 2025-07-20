@@ -1,23 +1,22 @@
 <template>
     <div class="dashboard-grid">
-      <!-- 第一行: 标题 -->
       <div class="grid-item header">Header</div>
   
-      <!-- 第二行: 导航卡片 -->
+      
       <div class="grid-item nav-cards">Nav Cards</div>
-      <div class="grid-item todo-list">Todo List</div>
+      <TodoList class="grid-item todo-list" />
   
-      <!-- 第三行 -->
+      
       
       <div class="grid-item progress-tracker">Progress Tracker</div>
       <div class="grid-item countdown">Countdown</div>
   
-      <!-- 第四行 -->
+      
       <div class="grid-item calendar">Calendar</div>
       <div class="grid-item habit-heatmap">Habit Heatmap</div>
       <div class="grid-item planner-cards">Planner Cards</div>
   
-      <!-- 第五行及以后 -->
+     
       <div class="grid-item daily-updates">Daily Updates</div>
       <div class="grid-item weekly-schedule">Weekly Schedule</div>
       <div class="grid-item time-tracker">Time Tracker</div>
@@ -25,7 +24,7 @@
   </template>
   
   <script setup lang="ts">
-  // 这里是我们的JS/TS逻辑区，现在先留空
+  import TodoList from '../components/TodoList.vue';
   </script>
   
   <style scoped>
@@ -94,7 +93,7 @@
 .todo-list {
   /* 从第1条线开始，跨越3个列，到第4条线结束 */
   grid-column: span 3; 
-  grid-row: 2/4;
+  grid-row: 2 / 4;
 }
 
 .progress-tracker {
